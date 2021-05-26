@@ -39,7 +39,7 @@ type: intent
 name: get_rating
 slots:
   - name: movie_name
-  - entity: movie_name
+    entity: movie_name
 
 utterances:
   - How good is the [movie_name] (Batman)?
@@ -51,7 +51,7 @@ type: intent
 name: get_director
 slots:
   - name: movie_name
-  - entity: movie_name
+    entity: movie_name
 
 utterances:
   - Who directed [movie_name] (Tenet)?
@@ -63,7 +63,7 @@ type: intent
 name: get_cast
 slots:
   - name: movie_name
-  - entity: movie_name
+    entity: movie_name
 
 utterances:
   - Who acted in movie the [movie_name] (Joker)?
