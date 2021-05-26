@@ -42,7 +42,7 @@ def get_movie_rating(movie_name):
         print("No movie found with name"+ movie_name)
     else:
         movie = ia.get_movie(movie[0].movieID)
-        print(movie_name+" got a rating of "+ str(movie["rating"]) + " out of 10")
+        print(movie_name + " got a rating of "+ str(movie["rating"]) + " out of 10")
 
 
 def get_movie_directors(movie_name):

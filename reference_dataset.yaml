@@ -42,7 +42,7 @@ slots:
     entity: movie_name
 
 utterances:
-  - How good is the [movie_name] (Batman)?
+  - How good is the movie [movie_name] (Batman)?
   - I want to know the movie rating for [movie_name] (Fast and the furious).
 
 # get_director intent
