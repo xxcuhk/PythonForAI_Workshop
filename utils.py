@@ -45,7 +45,7 @@ def get_movie_rating(movie_name):
         print(movie_name+" got a rating of "+ str(movie["rating"]) + " out of 10")
 
 
-def get_directors(movie_name):
+def get_movie_directors(movie_name):
     ia = IMDb()
 
     # get a movie and print its director(s)
@@ -58,7 +58,7 @@ def get_directors(movie_name):
         for director in movie['directors']:
             print(director['name'])
 
-def get_actors(movie_name):
+def get_movie_cast(movie_name):
     ia = IMDb()
 
     # get a movie and print its director(s)
