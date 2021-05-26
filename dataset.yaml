@@ -1,48 +1,7 @@
-# turnLightOn intent
+# find_weather intent
 ---
 type: intent
-name: turnLightOn
-slots:
-  - name: room
-    entity: room
-utterances:
-  - Turn on the lights in the [room](kitchen)
-  - give me some light in the [room](bathroom) please
-  - Can you light up the [room](living room) ?
-  - switch the [room](bedroom)'s lights on please
-
-# turnLightOff intent
----
-type: intent
-name: turnLightOff
-slots:
-  - name: room
-    entity: room
-utterances:
-  - Turn off the lights in the [room](entrance)
-  - turn the [room](bathroom)'s light out please
-  - switch off the light the [room](kitchen), will you?
-  - Switch the [room](bedroom)'s lights off please
-
-# setTemperature intent
----
-type: intent
-name: setTemperature
-slots:
-  - name: room
-    entity: room
-  - name: roomTemperature
-    entity: snips/temperature
-utterances:
-  - Set the temperature to [roomTemperature](19 degrees) in the [room](bedroom)
-  - please set the [room](living room)'s temperature to [roomTemperature](twenty two degrees celsius)
-  - I want [roomTemperature](75 degrees fahrenheit) in the [room](bathroom) please
-  - Can you increase the temperature to [roomTemperature](22 degrees) ?
-
-# Weather intent
----
-type: intent
-name: findWeather
+name: get_weather
 slots:
   - name: city
     entity: city
@@ -51,21 +10,72 @@ utterances:
   - How is the weather in [city](London)?
   - What is the weather in [city](New York)?
   - Can you tell me how is the weather like in [city] (Hong Kong)?
+  - I wonder how hot is it in [city](Paris)?
 
-# room entity
----
-type: entity
-name: room
-automatically_extensible: no
-values:
-- bedroom
-- [living room, main room, lounge]
-- [garden, yard, backyard]
-
+# city entity
 ---
 type: entity
 name: city
-automatically_extensible: yes
 values:
   - Hong Kong
   - Bazpur
+  - Paris
+  - London
+
+# tell_joke intent
+
+---
+type: intent
+name: tell_joke
+
+utterances:
+  - Hi, tell me a joke.
+  - I'm bored, entertain me with a joke
+
+# get_rating intent
+
+---
+type: intent
+name: get_rating
+slots:
+  - name: movie_name
+  - entity: movie_name
+
+utterances:
+  - How good is the [movie_name] (Batman)?
+  - I want to know the movie rating for [movie_name] (Fast and the furious).
+
+# get_director intent
+---
+type: intent
+name: get_director
+slots:
+  - name: movie_name
+  - entity: movie_name
+
+utterances:
+  - Who directed [movie_name] (Tenet)?
+  - I want to know the director of the movie [movie_name] (Ip Man).
+
+# get_cast intent
+---
+type: intent
+name: get_cast
+slots:
+  - name: movie_name
+  - entity: movie_name
+
+utterances:
+  - Who acted in movie the [movie_name] (Joker)?
+  - What is the cast for the movie [movie_name] (The boat people)
+
+# city entity
+---
+type: entity
+name: movie_name
+values:
+  - Joker
+  - The Dark Knight
+  - Fast and the furious
+  - Ip Man
+  - The boat people
