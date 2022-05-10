@@ -4,13 +4,13 @@ import pyowm
 def get_intent(prediction):
     return prediction["intent"]["intentName"]
 
-def get_entity_type(prediction):
+def get_entity(prediction):
     if (len(prediction["slots"]) > 0):
         return prediction["slots"][0]["entity"]
     else:
         return None
 
-def get_entity_value(prediction):
+def get_slot_value(prediction):
     if (len(prediction["slots"]) > 0):
         return prediction["slots"][0]["value"]["value"]
     else:
