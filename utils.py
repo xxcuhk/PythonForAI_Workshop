@@ -65,16 +65,3 @@ def get_movie_directors(movie_name):
                 print(director['name'])
     except:
         print("Movie director(s) couldn't be found in the database")
-
-def get_movie_cast(movie_name):
-    ia = IMDb()
-
-    # get a movie and print its director(s)
-    movie = ia.search_movie(movie_name)
-    if (len(movie) == 0):
-        print("No movie found with name" + movie_name)
-    else:
-        movie = ia.get_movie(movie[0].movieID)
-        print("The actors(s) in " + movie_name + " is/are:")
-        for actor in movie['cast'][:5]:
-            print(actor["name"] + " played the role of " + str(actor.currentRole))

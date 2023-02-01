@@ -49,19 +49,6 @@ utterances:
   - I want to know the director of the movie [movie_name](Ip Man).
 
 
-# get_cast intent
----
-type: intent
-name: get_cast
-slots:
-  - name: movie_name
-    entity: movie_name
-
-utterances:
-  - Who acted in movie the [movie_name](Joker)?
-  - What is the cast for the movie [movie_name](The boat people)?
-  
-
 # city entity
 ---
 type: entity
@@ -83,5 +70,4 @@ values:
   - Star Wars
   - Spider-man
   - Titanic
-  - Harry Potter and the Deathly Hallows
-  - The Lord of the Rings
+  - The Others
